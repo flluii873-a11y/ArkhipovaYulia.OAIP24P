@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block content %}
+<h1>Добавить новый материал</h1>
+
+<form method="POST">
+    <label>Название:</label>
+    <input type="text" name="title" required>
+
+    <label>Категория:</label>
+    <input type="text" name="category" required>
+
+    <label>Автор:</label>
+    <input type="text" name="author" required>
+
+    <label>Описание:</label>
+    <textarea name="description" rows="4" required></textarea>
+
+    <button type="submit">Сохранить</button>
+</form>
+
+<br>
+<a href="/materials">Отмена</a>
+{% endblock %}
+
+</body>
+</html>
