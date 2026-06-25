@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Материалы</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+{% block content %}
+<h1>Список материалов</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Категория</th>
+            <th>Автор</th>
+            <th>Описание</th> 
+        </tr>
+    </thead>
+    <tbody>
+        {% for material in materials %}
+        <tr>
+            <td>{{ material.id }}</td>
+            <td>{{ material.title }}</td>
+            <td>{{ material.category }}</td>
+            <td>{{ material.author }}</td>
+            <td>
+                <a href="/materials/{{ material.id }}">Все детали</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="5">Ничего..</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+</body>
+</html>
