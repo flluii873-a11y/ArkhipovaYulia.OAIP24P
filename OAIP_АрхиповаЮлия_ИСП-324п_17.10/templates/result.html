@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+</head>
+<body>
+
+<h1>Привет, {{ name }}!</h1>
+
+{% if mood == "good" %}
+    <p>Отлично! Пусть хороший день продолжается.</p>
+{% elif mood == "normal" %}
+    <p>Неплохой день, но его ещё можно сделать лучше.</p>
+{% else %}
+    <p>Ничего страшного. Иногда лучший план — немного отдохнуть.</p>
+{% endif %}
+
+<p>{{ name }}, ваш выбор - {{ language }}.</p>
+
+<p>{{ age_message }}</p>
+
+
+<a href="/">Заполнить форму ещё раз</a>
+
+</body>
+</html>
